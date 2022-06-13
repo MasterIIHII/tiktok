@@ -65,6 +65,7 @@ function Search() {
     // Refuse warning tippy
     <div>
       <HeadlessTippy
+        hideOnClick={false}
         interactive
         visible={showResult && searchResult.length > 0}
         render={(attrs) => (
@@ -80,7 +81,7 @@ function Search() {
         onClickOutside={handleHideResult}
       >
         <div className={cx('search')}>
-          <input
+          <input            
             ref={inputRef}
             value={searchValue}
             placeholder="Search accounts and videos"
