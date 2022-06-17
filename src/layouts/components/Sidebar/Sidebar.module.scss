@@ -3,3 +3,45 @@
   padding: 20px 0 26px 8px;    
   margin-left: -18px;
 }
+
+.menu {
+  margin-bottom: 8px;
+}
+
+.container {
+  padding: 16px 0;
+  color: rgba(22, 24, 35, 0.12);
+  font-size: 1.4rem;
+  font-weight: 600;
+  position: relative;
+
+  &::before {
+    content: "";
+    left: 8px;
+    right: 8px;
+    top: 0;
+    height: 1px;
+    background-color: rgba(22, 24, 35, 0.12);
+    transform: scaleY(0.5);
+    position: absolute;
+  } 
+  
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+.userLinkContainer {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 4px;
+  color: var(--text-color);
+  transition: background-color 200ms ease-in-out 0s;
+  
+  &::before, ::after {
+    box-sizing: border-box;
+  }
+}
