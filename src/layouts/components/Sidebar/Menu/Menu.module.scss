@@ -7,8 +7,7 @@
     transition: background-color ease-in-out 200ms;
     color: var(--text-color);
 
-    &.active {
-        background-color: rgba(22, 24, 35, 0.06);
+    &.active {        
         color: var(--primary);
 
         .icon {
