@@ -10,8 +10,20 @@
   padding: 0 var(--default-layout-horizontal-spacer);
   display: flex;
   margin-top: var(--default-layout-header-height);
+  justify-content: space-between;
+  align-self: center;
+  flex: 1 1 auto;
 }
 
-.content {
-  flex: 1;
+.content {  
+  margin-right: 16px;
+  margin-left: 16px;
+  width: var(--default-layout-home-width);
+  max-width: var(--default-layout-home-width);
+  padding: 24px 0;
+  position: relative;
+
+  &::before, ::after {
+    box-sizing: border-box;
+  }
 }
