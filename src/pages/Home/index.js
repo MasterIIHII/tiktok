@@ -10,7 +10,7 @@ import {
   ReportIcon,
   VoiceIcon,
 } from '~/components/Icons';
-import styles from './Home.scss';
+import styles from './Home.module.scss';
 
 const cx = classNames.bind(styles);
 

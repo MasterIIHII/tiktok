@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import { EditIcon, ForwardIcon2, LockedIcon, ProfileIcon } from '~/components/Icons';
-import styles from './Profile.scss';
+import styles from './Profile.module.scss';
 
 const cx = classNames.bind(styles);
 

@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import { VerifiedIcon } from '~/components/Icons';
-import styles from './Following.scss';
+import styles from './Following.module.scss';
 
 const cx = classNames.bind(styles);
 function Following() {

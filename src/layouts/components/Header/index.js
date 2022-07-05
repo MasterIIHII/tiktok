@@ -22,7 +22,7 @@ import Search from '../Search';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 
-import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
+import { InboxIcon, MessageIcon, PlusIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
@@ -106,9 +106,13 @@ function Header() {
           {currentUser ? (
             <>
               <Tippy delay={[0, 30]} content="Upload video" placement="bottom">
-                <button className={cx('action-btn', 'btn', 'btn-left')}>
-                  <UploadIcon />
-                </button>
+                <div className={cx('upload-wrapper')}>
+                  <a className={cx('icon-wrapper', 'selected')} href='/Upload'>
+                    <PlusIcon className={cx('plus-icon')}/>
+                    <span className={cx('icon-text')}>Upload</span>
+                  </a>
+                </div>
+                
               </Tippy>
               <Tippy delay={[0, 30]} content="Message" placement="bottom">
                 <button className={cx('action-btn', 'Message-icon-container')}>
