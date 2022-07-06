@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { DownIcon } from '~/components/Icons';
 import styles from './Upload.module.scss';
 
 const cx = classNames.bind(styles);
@@ -78,29 +79,31 @@ function Upload() {
                       <div className={cx('editor')}>
                         <div className={cx('DraftEditor-root DraftEditor-alignLeft')}>
                           <div className={cx('DraftEditor-editorContainer')}>
-                            <div className={cx('public-DraftEditor-content')}>
-
-                            </div>
+                            <div className={cx('public-DraftEditor-content')}></div>
                           </div>
-                        </div>                        
+                        </div>
                       </div>
 
                       <div className={cx('icon-style', 'at')}>
-                        <img src='https://lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/ies/creator_center/svgs/at.062a03e9.svg'
-                        alt='' style={{cursor: "pointer"}}></img>
+                        <img
+                          src="https://lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/ies/creator_center/svgs/at.062a03e9.svg"
+                          alt=""
+                          style={{ cursor: 'pointer' }}
+                        ></img>
                       </div>
 
                       <div className={cx('icon-style', 'hash')}>
-                        <img src='https://lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/ies/creator_center/svgs/hashtag.234f1b9c.svg'
-                        alt='' style={{cursor: "pointer"}}></img>
+                        <img
+                          src="https://lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/ies/creator_center/svgs/hashtag.234f1b9c.svg"
+                          alt=""
+                          style={{ cursor: 'pointer' }}
+                        ></img>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className={cx('container-at', 'hide-display')}>
-
-                </div>
+                <div className={cx('container-at', 'hide-display')}></div>
               </div>
 
               <div className={cx('margin-t-24', 'margin-b-4')}>
@@ -108,31 +111,116 @@ function Upload() {
 
                 <div className={cx('container-v3')}>
                   <div className={cx('bg-container-v3', 'empty')}>
-                    <div className={cx('candidate-v2', 'empty')}>
-                    
-                    </div>
+                    <div className={cx('candidate-v2', 'empty')}></div>
                   </div>
                 </div>
               </div>
 
               <div className={cx('margin-t-24')}>
+                <div className={cx('title-v2')}>
+                  <span className={cx('title-v2-text')}>Who can view this video</span>
+                </div>
 
+                <div
+                  className={cx('tiktok-select')}
+                  style={{ width: '300px', height: '36px' }}
+                >
+                  <div className={cx('tiktok-select-selector')}>
+                    <div
+                      className={cx('tiktok-select-selector-left')}
+                      style={{ maxWidth: '90%' }}
+                    >
+                      <span className={cx('tiktok-select-selector-text')}>Public</span>
+                    </div>
+
+                    <div className={cx('tiktok-select-selector-postfix-icon')}>
+                      <DownIcon />
+                    </div>
+                  </div>
+                </div>
+
+                <div className={cx('title-v2', 'margin-t-24')}>
+                  <span className={cx('title-v2-text')}>Allow users to:</span>
+                </div>
+
+                <div className={cx('checkbox-container')}>
+                  <div className={cx('checkbox')}>
+                    <div className={cx('checkbox-wrapper')}>
+                      <label className={cx('checkbox-label')}>
+                        <span className={cx('label-text')}>Comment</span>
+                      </label>
+
+                      <label className={cx('checkbox-input-wrapper')}>
+                        <input type={'checkbox'} />
+                        <span className={cx('checkmark')}></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className={cx('checkbox')}>
+                    <div className={cx('checkbox-wrapper')}>
+                      <label className={cx('checkbox-label')}>
+                        <span className={cx('label-text')}>Duet</span>
+                      </label>
+
+                      <label className={cx('checkbox-input-wrapper')}>
+                        <input type={'checkbox'} />
+                        <span className={cx('checkmark')}></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className={cx('checkbox')}>
+                    <div className={cx('checkbox-wrapper')}>
+                      <label className={cx('checkbox-label')}>
+                        <span className={cx('label-text')}>Stitch</span>
+                      </label>
+
+                      <label className={cx('checkbox-input-wrapper')}>
+                        <input type={'checkbox'} />
+                        <span className={cx('checkmark')}></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              <div className={cx('margin-t-21')}></div>
 
               <div>
+                <span className={cx('copyright-text')}>
+                  We'll check your video for pontential copyright infringements on used
+                  sounds. If infringements are found, you can edit the video before
+                  posting.
+                </span>
 
-              </div>
-
-              <div className={cx('switch-wrap')}>
-
-              </div>
-
-              <div>
-
+                <span className={cx('Learn-more')}>
+                  <span className={cx('Learn-more-text')}> Learn more</span>
+                </span>
               </div>
 
               <div className={cx('button-row')}>
+                <div className={cx('btn-cancel')}>
+                  <button className={cx('btn-cancel-wrapper')}>
+                    <div className={cx('btn-text-wrapper')}>
+                      <div className={cx('btn-text')}>Discard</div>
+                    </div>
+                  </button>
+                </div>
 
+                <div className={cx('btn-post')}>
+                  <button className={cx('btn-cancel-wrapper', 'disable')}>
+                    <div className={cx('btn-text-wrapper')}>
+                      <div className={cx('btn-text')}>Post</div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              <div className={cx('switch-wrap')}>
+                <div className={cx('switch-text-wrapper')}>
+                  <span className={cx('switch-text')}>Run a copy right check</span>
+                </div>
               </div>
             </div>
           </div>

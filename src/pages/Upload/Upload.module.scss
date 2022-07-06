@@ -262,6 +262,148 @@
   margin-top: 24px;
 }
 
+.title-v2 {
+  margin-bottom: 4px;
+}
+
+.title-v2-text {
+  box-sizing: border-box;
+  margin-block: 0px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgba(22, 24, 35, 1);
+}
+
+.tiktok-select {
+  position: relative;
+  display: inline-flex;
+}
+
+.tiktok-select-selector {
+  width: 300px;
+  height: 36px;
+  border: 1px solid rgba(22, 24, 35, 0.12);
+  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+  border-radius: 4px;
+  padding: 7px 12px;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tiktok-select-selector-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tiktok-select-selector-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgb(22, 24, 35);
+  height: 22px;  
+  font-size: 1.6rem;
+}
+
+.checkbox-container {
+  display: flex;
+}
+
+.checkbox {
+  margin-right: 32px; 
+}
+
+.checkbox-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 24px;
+}
+
+.checkbox-label {
+  box-sizing: border-box;
+  flex-grow: 1;
+  padding-inline: 12px 0px;
+  order: 1;
+}
+
+.label-text {
+  margin-block: 0px;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.checkbox-input-wrapper {
+  display: block;
+  position: relative;  
+  margin-block-start: 3px;  
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-wrapper input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border: 1px solid rgba(22, 24, 35, 0.12);
+  border-radius: 1px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-wrapper:hover input ~ .checkmark {
+  border-color: var(--primary)
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-wrapper input:checked ~ .checkmark {
+  background-color: var(--primary)
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-wrapper input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-wrapper .checkmark:after {
+  left: 4.5px;
+  top: 1px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 .Cover {
   box-sizing: border-box;
   margin-block: 0px;
@@ -297,6 +439,91 @@
   object-fit: cover;
 }
 
+.margin-t-21 {
+  margin-top: 21px;
+}
+
+.copyright-text {
+  margin-block: 0px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: rgba(22, 24, 35, 0.75);
+}
+
+.Learn-more {
+  cursor: pointer;
+}
+
+.Learn-more-text {
+  box-sizing: border-box;
+  margin-block: 0px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(22, 24, 35, 1);
+}
+
+.button-row {
+  display: flex;
+  margin-top: 24px;
+}
+
+.btn-cancel {
+  width: 164px;
+  margin-right: 16px;
+  background-color: transparent;
+}
+
+.btn-cancel-wrapper {
+  box-sizing: border-box;
+  appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-clip: padding-box;
+  width: 100%;
+  height: 48px;
+  min-width: 72px;
+  padding-inline: 23px;
+  color: rgba(22, 24, 35, 1);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(227, 227, 227);
+}
+
+.btn-text-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  overflow: hidden;
+  gap: 6px;
+}
+
+.btn-text {
+  box-sizing: border-box;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.disable {
+  cursor: not-allowed;
+  color: rgba(22, 24, 35, 0.34);
+  background-color: rgb(242, 242, 242);
+  border-color: rgb(242, 242, 242);
+}
+
+.btn-post {
+  width: 164px;
+}
+
 .switch-wrap {
   margin-top: 24px;
   margin-bottom: 6px;
@@ -304,7 +531,14 @@
   align-items: center;
 }
 
-.button-row {
-  display: flex;
-  margin-top: 24px;
+.switch-text-wrapper {
+  margin-right: 14px;
+}
+
+.switch-text {
+  box-sizing: border-box;
+  margin-block: 0px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgba(22, 24, 35, 1);
 }
