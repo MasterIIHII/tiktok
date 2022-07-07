@@ -1,0 +1,118 @@
+.global_container {
+    flex: 1;
+}
+
+.base_layout_container {
+    position: relative;
+    max-width: 1153px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+.base_layout_content {
+    display: flex;
+    margin-top: 24px;
+}
+
+.base_layout_main {
+    flex: 1;
+    width: 100%;
+    padding-bottom: 70px;
+    max-width: 1153px;
+}
+
+.feedback-header {
+    padding-top: 24px;
+}
+
+.title {
+    font-size: 3.2rem;
+    font-weight: 700;    
+    line-height: 38px;    
+    font-family: SofiaPro, sans-serif;
+}
+
+.breadcrumb-container {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-top: 8px;
+    line-height: 22px;
+    color: rgba(22, 24, 35, 0.5);
+}
+
+.feedback-main-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 24px;
+    min-width: 1111px;
+}
+
+.side-container {
+    width: 331px;
+}
+
+.option-container {
+    position: relative;
+    width: 331px;
+    padding: 16px 0;
+    cursor: pointer;
+}
+
+.text {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.icon-expand {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-50%);
+}
+
+.detail-board {
+    box-sizing: border-box;
+    margin-left: 54px;
+    width: 724px;
+    padding: 48px;
+    box-shadow: 2px 4px 20px rgba(80, 102, 102, 0.2);
+    border-radius: 8px;
+}
+
+.main-title {
+    font-family: SofiaPro, sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 24px;
+    padding-left: 2px;
+}
+
+.option-container {
+    position: relative;
+    width: 100%;
+    height: 57px;
+    cursor: pointer;
+}
+
+.detail-container .option-container .icon-expand {
+    position: absolute;
+    top: 19px;
+    right: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.content-container {
+    overflow: hidden;
+    transition: height 300ms, opacity 300ms;
+}
+
+.feedback-history {
+    margin-top: 24px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+}

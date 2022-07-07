@@ -9,6 +9,7 @@ import Profile from '~/pages/Profile';
 import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
 import Live from '~/pages/Live';
+import Feedback from '~/pages/Feedback';
 
 const publicRoutes = [
   {
@@ -37,6 +38,11 @@ const publicRoutes = [
     component: Search,
     layout: null,
   },
+  {
+    path: config.routes.feedback,
+    component: Feedback,
+    layout: HeaderOnlyLayout,
+  }
 ];
 
 const privateRoutes = [];
