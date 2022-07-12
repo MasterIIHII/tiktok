@@ -105,6 +105,11 @@
   right: 0;
   width: 16px;
   height: 16px;
+  transform: translateY(-50%);
+
+  &:active {
+    animation: turn-icon 300ms;
+  }
 }
 
 .content-container {

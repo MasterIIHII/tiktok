@@ -487,7 +487,7 @@ export const RightIcon = ({ className }) => (
   </svg>
 );
 
-export const DownIcon2 = ({ width = '16px', height = '16px', className }) => (
+export const DownIcon2 = ({ width = '16px', height = '16px', className, style }) => (
   <svg
     className={className}
     width="16"
@@ -495,6 +495,7 @@ export const DownIcon2 = ({ width = '16px', height = '16px', className }) => (
     viewBox="0 0 48 48"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
+    style={style}
   >
     <path
       fillRule="evenodd"

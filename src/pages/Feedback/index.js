@@ -1,10 +1,57 @@
 import classNames from 'classnames/bind';
+import React, { useRef, useState } from 'react';
 import { DownIcon2, RightIcon } from '~/components/Icons';
 import styles from './Feedback.module.scss';
+import '~/components/Animation test/Turn.css';
 
 const cx = classNames.bind(styles);
 
 function Feedback() {
+  const refTest = useRef();
+  const refTest1 = useRef();
+  const refTest2 = useRef();
+  const refTest3 = useRef();
+  const [active, setActive] = useState(false);
+  const [active1, setActive1] = useState(false);
+  const [active2, setActive2] = useState(false);
+  const [active3, setActive3] = useState(false);
+  const turnReverseAnimation = { animation: 'turn-reverse-icon 300ms forwards' };
+  const turnAnimation = { animation: 'turn-icon 300ms forwards' };
+
+  const test = (line) => {
+    let useThisRef = refTest;
+
+    if (line === 1) {
+      useThisRef = refTest1;
+    } else if (line === 2) {
+      useThisRef = refTest2;
+    } else if (line === 3) {
+      useThisRef = refTest3;
+    }
+
+    if (useThisRef.current.clientHeight === 0) {
+      useThisRef.current.style.height = useThisRef.current.scrollHeight + 'px';
+      useThisRef.current.style.opacity = '1';
+      if (line === 1) {
+        setActive1(true);
+      } else if (line === 2) {
+        setActive2(true);
+      } else if (line === 3) {
+        setActive3(true);
+      } else setActive(true);
+    } else {
+      useThisRef.current.style.height = '0px';
+      useThisRef.current.style.opacity = '0';
+      if (line === 1) {
+        setActive1(false);
+      } else if (line === 2) {
+        setActive2(false);
+      } else if (line === 3) {
+        setActive3(false);
+      } else setActive(false);
+    }
+  };
+
   return (
     <div className={cx('global_container')}>
       <div className={cx('base_layout_container')}>
@@ -73,15 +120,19 @@ function Feedback() {
                 <h3 className={cx('main-title')}>FREQUENTLY ASKED QUESTIONS</h3>
 
                 <div className={cx('detail-container')}>
-                  <div
-                    onMouseEnter={(e) => (e.target.style.opacity = '1')}
-                    className={cx('option-container')}
-                  >
+                  <div onClick={test} className={cx('option-container')}>
                     <h3 className={cx('text')}>How to log in</h3>
-                    <DownIcon2 className={cx('icon-expand')} />
+                    <DownIcon2
+                      className={cx('icon-expand')}
+                      style={active ? turnAnimation : turnReverseAnimation}
+                    />
                   </div>
 
-                  <div className={cx('content-container')}>
+                  <div
+                    ref={refTest}
+                    className={cx('content-container')}
+                    style={{ opacity: '0', height: '0px' }}
+                  >
                     <div className={cx('content-inside-container')}>
                       <div className={cx('content')}>
                         <p className={cx('text2')}>
@@ -121,12 +172,19 @@ function Feedback() {
                 </div>
 
                 <div className={cx('detail-container')}>
-                  <div className={cx('option-container')}>
+                  <div onClick={() => test(1)} className={cx('option-container')}>
                     <h3 className={cx('text')}>How to delete posted videos</h3>
-                    <DownIcon2 className={cx('icon-expand')} />
+                    <DownIcon2
+                      className={cx('icon-expand')}
+                      style={active1 ? turnAnimation : turnReverseAnimation}
+                    />
                   </div>
 
-                  <div className={cx('content-container')}>
+                  <div
+                    ref={refTest1}
+                    className={cx('content-container')}
+                    style={{ opacity: '0', height: '0px' }}
+                  >
                     <div className={cx('content-inside-container')}>
                       <div className={cx('content')}>
                         <p className={cx('text2')}>
@@ -154,12 +212,19 @@ function Feedback() {
                 </div>
 
                 <div className={cx('detail-container')}>
-                  <div className={cx('option-container')}>
+                  <div onClick={() => test(2)} className={cx('option-container')}>
                     <h3 className={cx('text')}>Can't log in with Instagram</h3>
-                    <DownIcon2 className={cx('icon-expand')} />
+                    <DownIcon2
+                      className={cx('icon-expand')}
+                      style={active2 ? turnAnimation : turnReverseAnimation}
+                    />
                   </div>
 
-                  <div className={cx('content-container')}>
+                  <div
+                    ref={refTest2}
+                    className={cx('content-container')}
+                    style={{ opacity: '0', height: '0px' }}
+                  >
                     <div className={cx('content-inside-container')}>
                       <div className={cx('content')}>
                         <p className={cx('text2')}>
@@ -196,14 +261,21 @@ function Feedback() {
                 </div>
 
                 <div className={cx('detail-container')}>
-                  <div className={cx('option-container')}>
+                  <div onClick={() => test(3)} className={cx('option-container')}>
                     <h3 className={cx('text')}>
                       This phone number is already registered
                     </h3>
-                    <DownIcon2 className={cx('icon-expand')} />
+                    <DownIcon2
+                      className={cx('icon-expand')}
+                      style={active3 ? turnAnimation : turnReverseAnimation}
+                    />
                   </div>
 
-                  <div className={cx('content-container')}>
+                  <div
+                    ref={refTest3}
+                    className={cx('content-container')}
+                    style={{ opacity: '0', height: '0px' }}
+                  >
                     <div className={cx('content-inside-container')}>
                       <div className={cx('content')}>
                         <p className={cx('text2')}>
