@@ -10,6 +10,7 @@ import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
 import Live from '~/pages/Live';
 import Feedback from '~/pages/Feedback';
+import GetCoin from '~/pages/GetCoin';
 
 const publicRoutes = [
   {
@@ -27,6 +28,11 @@ const publicRoutes = [
   {
     path: config.routes.profile,
     component: Profile,
+  },
+  {
+    path: config.routes.coin,
+    component: GetCoin,
+    layout: HeaderOnlyLayout,
   },
   {
     path: config.routes.upload,
