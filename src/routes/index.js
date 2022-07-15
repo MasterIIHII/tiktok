@@ -11,6 +11,7 @@ import Search from '~/pages/Search';
 import Live from '~/pages/Live';
 import Feedback from '~/pages/Feedback';
 import GetCoin from '~/pages/GetCoin';
+import Setting from '~/pages/Setting';
 
 const publicRoutes = [
   {
@@ -37,6 +38,11 @@ const publicRoutes = [
   {
     path: config.routes.upload,
     component: Upload,
+    layout: HeaderOnlyLayout,
+  },
+  {
+    path: config.routes.setting,
+    component: Setting,
     layout: HeaderOnlyLayout,
   },
   {
